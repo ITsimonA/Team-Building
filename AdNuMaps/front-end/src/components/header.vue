@@ -6,6 +6,50 @@ const endLocation = ref('')
 
 const emit = defineEmits(['close'])
 
+const gates = ['2nd Gate', '3rd Gate', 'Main Gate']
+
+const academic = [
+  'Adriatico',
+  'Arrupe',
+  'Bio Lab',
+  'Bonoan',
+  'Burns',
+  'College Reading Center',
+  'Dolan',
+  'Engineering Building',
+  'Entrepreneur Bldg',
+  "James O'Brien Library",
+  'Madrigal Bldg',
+  'Phelan',
+  'Richie Fernando Hall',
+  'Santos',
+  'SHS Bldg',
+]
+
+const administration = [
+  'ACLC',
+  'Administration Building',
+  'H.E. Bldg',
+  'Physical Plant Admin',
+  'Triumph Office',
+  'Xavier Hall (OSA / SSG)',
+]
+
+const dining = ['Bonoan Cafeteria', 'Coko Cafe', 'IGP Cafe']
+
+const sports = [
+  'Alingal Multi-purpose Hall',
+  'Covered Courts',
+  'Eco Garden',
+  'Football Field',
+  'Ignatius Park',
+  'Tennis Court',
+]
+
+const studentLife = ['Faber Center', 'Jesuit Residence', 'M.R.', 'University Gym', 'University Press']
+
+const religious = ['Christ the King Church']
+
 function swapLocations() {
   const temp = startLocation.value
   startLocation.value = endLocation.value
@@ -22,6 +66,27 @@ function swapLocations() {
           <div class="select-wrapper">
             <select id="start-location" v-model="startLocation">
               <option value="" disabled hidden>Choose a location...</option>
+              <optgroup label="Gates">
+                <option v-for="loc in gates" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Academic">
+                <option v-for="loc in academic" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Administration">
+                <option v-for="loc in administration" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Dining">
+                <option v-for="loc in dining" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Sports & Recreation">
+                <option v-for="loc in sports" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Student Life">
+                <option v-for="loc in studentLife" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Religious">
+                <option v-for="loc in religious" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
             </select>
             <svg class="chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path
@@ -44,6 +109,27 @@ function swapLocations() {
           <div class="select-wrapper">
             <select id="end-location" v-model="endLocation">
               <option value="" disabled hidden>Choose a location...</option>
+              <optgroup label="Gates">
+                <option v-for="loc in gates" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Academic">
+                <option v-for="loc in academic" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Administration">
+                <option v-for="loc in administration" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Dining">
+                <option v-for="loc in dining" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Sports & Recreation">
+                <option v-for="loc in sports" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Student Life">
+                <option v-for="loc in studentLife" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
+              <optgroup label="Religious">
+                <option v-for="loc in religious" :key="loc" :value="loc">{{ loc }}</option>
+              </optgroup>
             </select>
             <svg class="chevron" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
               <path

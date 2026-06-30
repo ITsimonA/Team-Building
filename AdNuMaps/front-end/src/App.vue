@@ -1,7 +1,22 @@
-<script setup></script>
+<script setup>
+import Header from './components/header.vue'
+import Body from './components/body.vue'
+import Footer from './components/footer.vue'
+</script>
 
 <template>
-  <router-view />
+  <div class="app">
+    <Header />
+    <Body />
+    <Footer />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #dbeafe;
+}
+</style>
